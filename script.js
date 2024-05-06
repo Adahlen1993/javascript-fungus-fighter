@@ -18,6 +18,7 @@ function onReady() {
 
 
 onReady();
+
 let playerAP = 100;
 let fungusHP = 100;
 let arcaneScepter = {
@@ -43,6 +44,9 @@ playerAP -= arcaneScepter.ap;
 fungusHP -= arcaneScepter.hpdmg;
 document.getElementById('action-points').innerHTML = `${playerAP} AP`;
 document.getElementById('health-points').innerHTML = `${fungusHP} HP`;
+document.getElementById('ap-meter').value = playerAP;
+document.getElementById('hp-meter').value = fungusHP;
+
     if(playerAP < 0) {
         playerAP = 0;
         document.getElementById('action-points').innerHTML = `${playerAP} AP`;
@@ -64,7 +68,9 @@ function entangleATK(event) {
     playerAP -= entangle.ap;
     fungusHP -= entangle.hpdmg;
     document.getElementById('action-points').innerHTML = `${playerAP} AP`;
-document.getElementById('health-points').innerHTML = `${fungusHP} HP`;
+    document.getElementById('health-points').innerHTML = `${fungusHP} HP`;
+    document.getElementById('ap-meter').value = playerAP;
+    document.getElementById('hp-meter').value = fungusHP;
 if(playerAP < 0) {
     playerAP = 0;
     document.getElementById('action-points').innerHTML = `${playerAP} AP`;
@@ -89,6 +95,8 @@ playerAP -= dragonBlade.ap;
 fungusHP -= dragonBlade.hpdmg;
 document.getElementById('action-points').innerHTML = `${playerAP} AP`;
 document.getElementById('health-points').innerHTML = `${fungusHP} HP`;
+document.getElementById('ap-meter').value = playerAP;
+document.getElementById('hp-meter').value = fungusHP;
 if(playerAP < 0) {
     playerAP = 0;
     document.getElementById('action-points').innerHTML = `${playerAP} AP`;
@@ -111,6 +119,8 @@ playerAP -= starFire.ap;
 fungusHP -= starFire.hpdmg;
 document.getElementById('action-points').innerHTML = `${playerAP} AP`;
 document.getElementById('health-points').innerHTML = `${fungusHP} HP`;
+document.getElementById('ap-meter').value = playerAP;
+document.getElementById('hp-meter').value = fungusHP;
 if(playerAP < 0) {
     playerAP = 0;
     document.getElementById('action-points').innerHTML = `${playerAP} AP`;
