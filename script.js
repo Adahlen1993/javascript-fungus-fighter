@@ -61,6 +61,11 @@ document.getElementById('hp-meter').value = fungusHP;
         document.getElementById('health-points').innerHTML = `${fungusHP} HP`;
         document.getElementById('fungus-move').className = "freaky-fungus dead";
     }
+    //while (fungusHP < 50 && fungusHP < 100) {
+       
+    //     setInterval(halfHealth,1000)
+    // }
+
 }
 
 function entangleATK(event) {
@@ -136,3 +141,10 @@ if(fungusHP < 0) {
     document.getElementById('fungus-move').className = "freaky-fungus dead";
 }
 }
+
+// function halfHealth() {
+//    let increaseHealth = document.getElementById('hp-meter').value 
+//     increaseHealth++;
+//     increaseHealth = fungusHP;
+//     return fungusHP;
+// }
